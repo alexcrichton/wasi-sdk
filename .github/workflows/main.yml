@@ -1,9 +1,8 @@
 name: CI
 
 on:
-  create:
-    tags:
   push:
+    tags:
     branches:
       - main
       - faster-ci
