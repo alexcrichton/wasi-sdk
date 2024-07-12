@@ -3,8 +3,10 @@ name: CI
 on:
   push:
     tags:
+      - 'wasi-sdk-*'
     branches:
       - main
+
   pull_request:
   workflow_dispatch:
 
