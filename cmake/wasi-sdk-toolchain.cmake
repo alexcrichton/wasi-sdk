@@ -74,7 +74,8 @@ list(TRANSFORM tools PREPEND --target= OUTPUT_VARIABLE build_targets)
 list(TRANSFORM tools PREPEND --target=install- OUTPUT_VARIABLE install_targets)
 
 ExternalProject_Add(llvm-build
-  SOURCE_DIR "${llvm_proj_dir}/llvm"
+  URL "https://github.com/llvm/llvm-project/archive/llvmorg-18.1.2.tar.gz"
+  SOURCE_SUBDIR "llvm"
   CMAKE_ARGS
     ${default_cmake_args}
     -DLLVM_ENABLE_TERMINFO=OFF
