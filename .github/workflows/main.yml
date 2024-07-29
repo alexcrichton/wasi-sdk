@@ -6,6 +6,7 @@ on:
       - 'wasi-sdk-*'
     branches:
       - main
+      - no-llvm-submodule
 
   pull_request:
   workflow_dispatch:
