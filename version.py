@@ -63,8 +63,12 @@ def git_version():
     version = exec(['git', 'describe', '--long', '--candidates=999',
                     '--match=wasi-sdk-*', '--dirty=+m', f'--abbrev={GIT_REF_LEN}'],
                     os.path.dirname(sys.argv[0]))
-    major, minor, git, dirty = parse_git_version(version)
+    # major, minor, git, dirty = parse_git_version(version)
+    major = '30'
+    minor = '1'
+    git = '-exns'
     version = f'{major}.{minor}'
+    dirty = True
     if git:
         version += f'g{git}'
     if dirty:
