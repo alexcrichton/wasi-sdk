@@ -24,7 +24,7 @@ option(WASI_SDK_DEBUG_PREFIX_MAP "Pass `-fdebug-prefix-map` for built artifacts"
 option(WASI_SDK_INCLUDE_TESTS "Whether or not to build tests by default" OFF)
 option(WASI_SDK_INSTALL_TO_CLANG_RESOURCE_DIR "Whether or not to modify the compiler's resource directory" OFF)
 option(WASI_SDK_LTO "Whether or not to build LTO assets" ON)
-option(WASI_SDK_EXCEPTIONS "Whether or not C++ exceptions are enabled" OFF)
+option(WASI_SDK_EXCEPTIONS "Whether or not C++ exceptions are enabled" ON)
 set(WASI_SDK_CPU_CFLAGS "-mcpu=lime1" CACHE STRING "CFLAGS to specify wasm features to enable")
 
 set(wasi_tmp_install ${CMAKE_CURRENT_BINARY_DIR}/install)

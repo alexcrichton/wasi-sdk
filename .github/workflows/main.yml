@@ -6,7 +6,7 @@ on:
       - 'wasi-sdk-*'
     branches:
       - main
-      - cpp-exceptions-test
+      - cpp-exceptions
 
   pull_request:
   workflow_dispatch:
