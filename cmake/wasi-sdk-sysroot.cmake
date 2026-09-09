@@ -477,7 +477,7 @@ add_dependencies(build wasi-libc libcxx compiler-rt)
 # sysroot header logic
 # =============================================================================
 
-set(dedupe_headers ${CMAKE_CURRENT_BINARY_DIR}/dedupe_headers)
+set(dedupe_headers ${CMAKE_CURRENT_BINARY_DIR}/dedupe_headers${CMAKE_HOST_EXECUTABLE_SUFFIX})
 set(dedupe_headers_src ${CMAKE_CURRENT_SOURCE_DIR}/src/dedupe_headers.rs)
 add_custom_command(
   OUTPUT ${dedupe_headers}
