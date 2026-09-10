@@ -78,7 +78,6 @@ fn copy(src_root: &Path, srcs: &mut Vec<PathBuf>, dst_root: &Path, dst: &mut Pat
         // Bring all iterators up to `name`
         for (other, src) in rest.iter_mut() {
             while let Some((e, ft)) = other.next_if(|(e, _)| e < name) {
-                // cp_r(&mut src.join(&e), ft, &mut dst_root.join(&dst).join(&e));
                 rel_cp_r(src_root, src, ft, dst_root, &e);
             }
         }
@@ -149,7 +148,6 @@ fn copy(src_root: &Path, srcs: &mut Vec<PathBuf>, dst_root: &Path, dst: &mut Pat
     // Copy over everything remaining in all other directories
     for (other, src) in rest.iter_mut() {
         for (e, ft) in other {
-            // cp_r(&mut src.join(&e), ft, &mut dst_root.join(&dst).join(&e));
             rel_cp_r(src_root, src, ft, dst_root, &e);
         }
     }
